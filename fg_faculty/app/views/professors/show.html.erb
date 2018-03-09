@@ -1,0 +1,37 @@
+<p>
+  <strong>Name:</strong>
+  <%= @professor.Name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @professor.Email %>
+</p>
+
+<p>
+  <strong>Office:</strong>
+  <%= @professor.Office %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @professor.Department %>
+</p>
+
+<p>
+  <strong>image:</strong>
+  <%= link_to image_tag(@professor.image.url(:thumb), class: 'media-object'), @professor.image.url, target: '_blank' %>
+</p>
+
+<p>
+  <strong>Phone_Number:</strong>
+  <%= @professor.Phone_Number %>
+</p>
+
+<p>
+  <strong>Personal_Statement:</strong>
+  <%= @professor.Personal_Statement %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>

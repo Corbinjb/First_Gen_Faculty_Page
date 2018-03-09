@@ -1,0 +1,58 @@
+<%= form_with model: @professor, local: true do |form| %>
+
+  <% if @professor.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@professor.errors.count, "error") %> prohibited
+        this professor from being saved:
+      </h2>
+      <ul>
+        <% @professor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end%>
+
+  <p>
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </p>
+
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :Email %>
+  </p>
+
+  <p>
+    <%= form.label :Office %><br>
+    <%= form.text_field :Office %>
+  </p>
+
+  <p>
+    <%= form.label :Department %><br>
+    <%= form.text_field :Department %>
+  </p>
+
+  <p>
+    <%= form.label :image %><br>
+    <%= form.file_field :image %>
+  </p>
+
+  <p>
+    <%= form.label :Phone_Number %><br>
+    <%= form.text_field :Phone_Number %>
+  </p>
+
+
+  <p>
+    <%= form.label :Personal_Statement %><br>
+    <%= form.text_area :Personal_Statement %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+ <% end %>
+
