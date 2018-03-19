@@ -13,7 +13,7 @@ class ProfessorsController < ApplicationController
   end
 
   def edit
-    @professor = Professor.new
+    @professor = Professor.find(params[:id])
   end
 
   def create
@@ -27,13 +27,20 @@ class ProfessorsController < ApplicationController
   end
 
   def update 
-    @professor = Article.find(params[:id])
+    @professor = Professor.find(params[:id])
  
     if @professor.update(professor_params)
       redirect_to @professor
     else
       render 'edit'
     end  
+  end
+
+  def destroy
+    @professor = Professor.find(params[:id])
+    @professor.destroy
+
+    redirect_to professors_path
   end
 
   private
