@@ -1,4 +1,5 @@
-class WelcomeController < ApplicationController
+class WelcomeController < ProfessorsController 
   def index
+    @professors = Professor.all
   end
 end

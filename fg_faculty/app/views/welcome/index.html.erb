@@ -1,3 +1,27 @@
 <h1>FirstGen Faculty Network</h1>
-<%= link_to 'FirstGen Faculty', controller: 'professors' %>
-<p>"Mission Statement/ Introduction"</p>
+
+<p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
+
+<h2>HMC Faculty Mentors</h2>
+<%= link_to 'Become a Mentor', new_professor_path %>
+
+<table>
+  <% @professors.each do |professor| %>
+  <tr>
+    <th><%= professor.Name %></th>
+    <th>Department</th>
+    <th>Office</th>
+    <th>Email</th> 
+    <th>Phone</th>
+  </tr>
+
+    <tr>
+      <td><%= professor.image %></td>
+      <td><%= professor.Department %></td>
+      <td><%= professor.Office %></td>
+      <td><%= professor.Email %></td>
+      <td><%= professor.Phone_Number %></td>
+      <td><%= link_to 'View Profile', professor_path(professor) %></td> 
+    </tr>
+  <% end %>
+</table>
