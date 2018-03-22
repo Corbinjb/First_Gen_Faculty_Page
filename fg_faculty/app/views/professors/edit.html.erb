@@ -1,5 +1,6 @@
-<h1>Edit professor</h1>
- 
 <%= render 'form' %>
 	 
 <%= link_to 'Back', professor_path %>
+<td><%= link_to 'Delete Profile', professor_path(@professor),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
