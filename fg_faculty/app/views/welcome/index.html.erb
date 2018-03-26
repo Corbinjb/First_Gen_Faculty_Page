@@ -1,27 +1,30 @@
-<h1>FirstGen Faculty Network</h1>
+<!-- Page Content -->
+<div class="container">
 
-<p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
+  <!-- Introduction Row -->
+  <h1 class="my-4">FirstGen Faculty Network
+    <small>It's Nice to Meet You!</small>
+  </h1>
+  <p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
+  <!-- Team Members Row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="my-4">HMC Faculty Mentors</h2>
+      <%= link_to 'Become a Mentor', new_professor_path %>
+    </div>
+    <% @professors.each do |professor| %>
+      <div class="col-lg-4 col-sm-6 text-center mb-4">
+        <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+        <h3><%= professor.Name %>
+          <small><%= professor.Department %></small>
+        </h3>
+        <p><%= professor.Office %></p>
+        <p><%= professor.Email %></p>
+        <p><%= professor.Phone_Number %></p>
+      </div>
+      <% end %>
 
-<h2>HMC Faculty Mentors</h2>
-<%= link_to 'Become a Mentor', new_professor_path %>
+  </div>
 
-<table>
-  <% @professors.each do |professor| %>
-  <tr>
-    <th><%= professor.Name %></th>
-    <th>Department</th>
-    <th>Office</th>
-    <th>Email</th> 
-    <th>Phone</th>
-  </tr>
-
-    <tr>
-      <td><%= professor.image %></td>
-      <td><%= professor.Department %></td>
-      <td><%= professor.Office %></td>
-      <td><%= professor.Email %></td>
-      <td><%= professor.Phone_Number %></td>
-      <td><%= link_to 'View Profile', professor_path(professor) %></td> 
-    </tr>
-  <% end %>
-</table>
+</div>
+<!-- /.container -->
