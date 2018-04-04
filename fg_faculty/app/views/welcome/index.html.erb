@@ -3,7 +3,6 @@
 
   <!-- Introduction Row -->
   <h1 class="my-4">FirstGen Faculty Network
-    <small>It's Nice to Meet You!</small>
   </h1>
   <p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
   <!-- Team Members Row -->
@@ -14,7 +13,7 @@
     </div>
     <% @professors.each do |professor| %>
       <div class="col-lg-4 col-sm-6 text-center mb-4">
-        <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+        <%= link_to image_tag(professor.image.url, class: 'media-object'), professor.image.url, target: '_blank' %>
         <h3><%= professor.Name %>
           <small><%= professor.Department %></small>
         </h3>
