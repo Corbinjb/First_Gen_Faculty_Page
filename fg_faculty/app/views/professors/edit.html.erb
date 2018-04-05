@@ -1,5 +1,5 @@
 <%= render 'form' %>
-	 
+<body style="background-color:FloralWhite">	 
 <%= link_to 'Back', welcome_index_path %>
-<td><%= link_to 'Delete Profile', welcome_index_path,
+<td><%= link_to 'Delete Profile', professor_path(@professor),
               :confirm => "Are you sure?", :method => :delete %></td>
