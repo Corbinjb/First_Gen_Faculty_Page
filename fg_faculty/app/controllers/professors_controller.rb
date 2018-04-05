@@ -40,7 +40,7 @@ class ProfessorsController < ApplicationController
     @professor = Professor.find(params[:id])
     @professor.destroy
 
-    redirect_to professors_path
+    redirect_to welcome_index_path
   end
 
   private
