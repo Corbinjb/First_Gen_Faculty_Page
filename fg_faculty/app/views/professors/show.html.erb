@@ -1,4 +1,9 @@
-<body style="background-color:FloralWhite">
+<body style="background-color:FloralWhite; margin-left: 10px; text-align: center">
+
+<p style="margin-top: 10px">
+  <%= link_to image_tag(@professor.image.url(:thumb), class: 'media-object'), @professor.image.url, target: '_blank' %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @professor.Name %>
@@ -19,10 +24,6 @@
   <%= @professor.Department %>
 </p>
 
-<p>
-  <strong>image:</strong>
-  <%= link_to image_tag(@professor.image.url(:thumb), class: 'media-object'), @professor.image.url, target: '_blank' %>
-</p>
 
 <p>
   <strong>Phone_Number:</strong>

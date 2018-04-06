@@ -22566,3 +22566,466 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:24 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (240.4ms)
+Completed 200 OK in 283ms (Views: 272.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 13:19:49 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 13:19:53 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-05 13:19:57 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-05 22:44:33 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 119ms (Views: 109.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 22:44:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 22:44:58 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (264.2ms)
+Completed 200 OK in 330ms (Views: 318.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-05 22:48:40 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (22.2ms)
+  Rendered professors/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/professors" for 127.0.0.1 at 2018-04-05 22:49:06 -0700
+Processing by ProfessorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EbLB2Z1ZhX8016tpHx/lSONEALvLLl02wCGo5iBju2Rmj4fIT8gUr0PBJEG3IesRhxloPWa6YfbZjXG0VIQwWQ==", "professor"=>{"Name"=>"ssadfs", "Email"=>"asdf", "Office"=>"asdf", "Department"=>"asdfsd", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fdba286e2c0 @tempfile=#<Tempfile:/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180405-97258-kc9440.JPG>, @original_filename="IMG_0098.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"IMG_0098.JPG\"\r\nContent-Type: image/jpeg\r\n">, "Phone_Number"=>"asdf", "Personal_Statement"=>"asdfasd"}, "commit"=>"Create Professor"}
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180405-97258-kc9440.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-13z04ib.JPG
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-13z04ib.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-ckb7po.JPG
+Command :: file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-ckb7po.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-13z04ib.JPG[0]' 2>/dev/null
+Command :: convert '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-13z04ib.JPG[0]' -auto-orient -resize "128x" -crop "128x128+0+21" +repage '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/249e6df76a39e0eab983cc3858f2441620180405-97258-xx5llo.jpg'
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/249e6df76a39e0eab983cc3858f2441620180405-97258-xx5llo.jpg to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/42222b1e5ffc8dc2e0ee4858e0c949b820180405-97258-19c4net.jpg
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-13z04ib.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-zmj9r8.JPG
+Command :: file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c70525875e3f91905ecbb2dc1f35044720180405-97258-zmj9r8.JPG'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "Email", "Office", "Department", "Phone_Number", "Personal_Statement", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Name", "ssadfs"], ["Email", "asdf"], ["Office", "asdf"], ["Department", "asdfsd"], ["Phone_Number", "asdf"], ["Personal_Statement", "asdfasd"], ["created_at", "2018-04-06 05:49:07.715351"], ["updated_at", "2018-04-06 05:49:07.715351"], ["image_file_name", "IMG_0098.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 1339013], ["image_updated_at", "2018-04-06 05:49:06.774716"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 960ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-05 22:49:07 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-05 22:49:13 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 23:16:13 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (218.1ms)
+Completed 200 OK in 263ms (Views: 250.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:16:16 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 44ms (Views: 36.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:18:08 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:18:55 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:20:38 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:21:50 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:21:52 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:22:03 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:23:37 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:23:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:31:13 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/models/professor.rb:5: syntax error, unexpected tSYMBEG, expecting '}'
+				 :profile => ["512x512#", :jpg]}
+				 ^
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/models/professor.rb:5: syntax error, unexpected '}', expecting keyword_end
+...:profile => ["512x512#", :jpg]}
+...                              ^):
+  
+app/models/professor.rb:5: syntax error, unexpected tSYMBEG, expecting '}'
+app/models/professor.rb:5: syntax error, unexpected '}', expecting keyword_end
+app/controllers/professors_controller.rb:7:in `show'
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:35:43 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/system/professors/images/000/000/029/profile/Harrison_Chotzen_-_Headshot.jpg?1522957427" for 127.0.0.1 at 2018-04-05 23:35:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/system/professors/images/000/000/029/profile/Harrison_Chotzen_-_Headshot.jpg"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:36:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 30.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/system/professors/images/000/000/029/profile/Harrison_Chotzen_-_Headshot.jpg?1522957427" for 127.0.0.1 at 2018-04-05 23:36:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/system/professors/images/000/000/029/profile/Harrison_Chotzen_-_Headshot.jpg"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:38:03 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 30.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:45:10 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/system/professors/images/000/000/029/big/Harrison_Chotzen_-_Headshot.png?1522957427" for 127.0.0.1 at 2018-04-05 23:45:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/system/professors/images/000/000/029/big/Harrison_Chotzen_-_Headshot.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:45:26 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected ')'
+..._tag(@professor.image.url(big:), class: 'media-object'), @pr...
+...                              ^
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected tLABEL
+..., @professor.image.url, target: '_blank' );@output_buffer.sa...
+...                        ^~~~~~~
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+...r.image.url, target: '_blank' );@output_buffer.safe_append='
+...                              ^):
+  
+app/views/professors/show.html.erb:4: syntax error, unexpected ')'
+app/views/professors/show.html.erb:4: syntax error, unexpected tLABEL
+app/views/professors/show.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:47:06 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+Completed 500 Internal Server Error in 20ms
+
+
+  
+NameError (undefined local variable or method `styles' for Professor (call 'Professor.connection' to establish a connection):Class):
+  
+app/models/professor.rb:4:in `<class:Professor>'
+app/models/professor.rb:1:in `<top (required)>'
+app/controllers/professors_controller.rb:7:in `show'
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:47:22 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected ')'
+..._tag(@professor.image.url(big:), class: 'media-object'), @pr...
+...                              ^
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected tLABEL
+..., @professor.image.url, target: '_blank' );@output_buffer.sa...
+...                        ^~~~~~~
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/professors/show.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+...r.image.url, target: '_blank' );@output_buffer.safe_append='
+...                              ^):
+  
+app/views/professors/show.html.erb:4: syntax error, unexpected ')'
+app/views/professors/show.html.erb:4: syntax error, unexpected tLABEL
+app/views/professors/show.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:47:34 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/29" for 127.0.0.1 at 2018-04-05 23:48:29 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-05 23:52:39 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-05 23:52:48 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
