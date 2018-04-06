@@ -1,7 +1,23 @@
-<body style="background-color:FloralWhite; margin-left: 10px; text-align: center">
+<body style="background-color:FloralWhite">
 
+  <style>
+  body {
+      background: #555;
+  }
+
+  .content {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 10px;
+  }
+  </style>
+  
+<body>
+
+<div class="content">
 <p style="margin-top: 10px">
-  <%= link_to image_tag(@professor.image.url(:thumb), class: 'media-object'), @professor.image.url, target: '_blank' %>
+  <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), @professor.image.url, target: '_blank' %>
 </p>
 
 <p>
@@ -24,7 +40,6 @@
   <%= @professor.Department %>
 </p>
 
-
 <p>
   <strong>Phone_Number:</strong>
   <%= @professor.Phone_Number %>
@@ -35,5 +50,8 @@
   <%= @professor.Personal_Statement %>
 </p>
 
-<%= link_to 'Back', welcome_index_path %>
+<%= link_to 'Back', welcome_index_path %><br>
 <%= link_to 'Update Profile', edit_professor_path(@professor) %>
+
+</div>
+</body>

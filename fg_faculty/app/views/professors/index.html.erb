@@ -8,7 +8,7 @@
     <th>Office</th>
     <th>Department</th>
     <th>Phone</th>
-    <th>Personal Statement</th> 
+    <th>Personal Statement</th>
   </tr>
 
   <% @professors.each do |professor| %>
@@ -20,8 +20,8 @@
       <td><%= professor.Email %></td>
       <td><%= professor.Phone_Number %></td>
       <td><%= professor.Personal_Statement %></td>
-      <td><%= link_to 'Show', professor_path(professor) %></td>
-      <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+      <td><%= link_to 'Show', professor_path(professor) %></td><br>
+      <td><%= link_to 'Edit', edit_professor_path(professor) %></td><br>
       <td><%= link_to 'Destroy', professor_path(professor), 
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>

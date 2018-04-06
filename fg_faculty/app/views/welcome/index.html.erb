@@ -5,17 +5,17 @@
   <body style="background-color:FloralWhite">
   <h1 class="my-4">FirstGen Faculty Network</h1>
   <p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
-  
+
   <%=image_tag("HMC_OID_website_header_photo.jpg")%>
   <!-- Team Members Row -->
   <div class="row">
     <div class="col-lg-12">
       <h2 class="my-4">Our Mentors</h2>
-      <%= link_to 'Become a Mentor', new_professor_path %>
+      <p><%= link_to 'Become a Mentor', new_professor_path %></p>
     </div>
     <% @professors.each do |professor| %>
       <div class="col-lg-4 col-sm-6 text-center mb-4">
-        <%= link_to image_tag(professor.image.url(:thumb), class: 'media-object'), professor.image.url(:thumb), target: '_blank' %>
+        <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor.image.url(:thumb), target: '_blank' %>
         <h5><%= link_to professor.Name, professor_path(professor) %></h5>
         <p>Department: <%= professor.Department %></p>
         <p>Office: <%= professor.Office %></p>
