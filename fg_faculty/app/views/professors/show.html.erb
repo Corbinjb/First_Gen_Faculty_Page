@@ -6,52 +6,79 @@
   }
 
   .content {
-      max-width: 500px;
-      margin: auto;
+      max-width: 700px;
+      margin: auto;     
       background: white;
       text-align: center;
   }
   </style>
-  
+<p style="background-color:FloralWhite, margin-bottom: 10px"></p>
 <body>
 
 <div class="content">
-<p style="margin-top: 10px">
-  <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), @professor.image.url, target: '_blank' %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+<h2>
   <%= @professor.Name %>
-</p>
+</h2>
 
-<p>
-  <strong>Email:</strong>
-  <%= @professor.Email %>
-</p>
 
-<p>
-  <strong>Office:</strong>
-  <%= @professor.Office %>
-</p>
+<div class="row">
+  <div class="column"> 
+     <p style="padding-top: 10px">
+       <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), @professor.image.url, target: '_blank' %>
+     </p>
 
-<p>
-  <strong>Department:</strong>
-  <%= @professor.Department %>
-</p>
+  </div>
+  
+  <div class="column">
+     <p>
+   	 <strong>Email:</strong>
+  	 <%= @professor.Email %>
+     </p>
 
-<p>
-  <strong>Phone_Number:</strong>
-  <%= @professor.Phone_Number %>
-</p>
+     <p>
+      	 <strong>Office:</strong>
+         <%= @professor.Office %>
+     </p>
 
-<p>
-  <strong>Personal_Statement:</strong>
-  <%= @professor.Personal_Statement %>
+     <p>
+       	 <strong>Department:</strong>
+         <%= @professor.Department %>
+    </p>
+
+    <p>
+  	 <strong>Phone:</strong>
+  	 <%= @professor.Phone_Number %>
+    </p>
+
+  </div>
+
+</div>
+
+<style>
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+
+<h4>
+Personal Statement
+</h4>
+<p style="padding-left: 10px; padding-right: 10px" >
+  <i>  <%= @professor.Personal_Statement %> </i>
 </p>
 
 <%= link_to 'Back', welcome_index_path %><br>
 <%= link_to 'Update Profile', edit_professor_path(@professor) %>
 
 </div>
+<p style="background-color:FloralWhite, margin-bottom: 20px"></p>
 </body>

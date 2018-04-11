@@ -1,3 +1,6 @@
+
+
+
 <%= form_with model: @professor, local: true do |form| %>
 
   <% if @professor.errors.any? %>
@@ -16,12 +19,12 @@
 
   <p>
     <%= form.label :Name %><br>
-    <%= form.text_field :Name %>
+    <%= form.text_field :Name, :required => true %>
   </p>
 
   <p>
     <%= form.label :Email %><br>
-    <%= form.text_field :Email %>
+    <%= form.text_field :Email, :required => true %>
   </p>
 
   <p>
@@ -31,23 +34,23 @@
 
   <p>
     <%= form.label :Department %><br>
-    <%= form.text_field :Department %>
+    <%= form.text_field :Department, :required => true %>
   </p>
 
   <p>
     <%= form.label :image %><br>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, :required => true %>
   </p>
 
   <p>
     <%= form.label :Phone_Number %><br>
-    <%= form.text_field :Phone_Number %>
+    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}" %>
   </p>
 
 
   <p>
     <%= form.label :Personal_Statement %><br>
-    <%= form.text_area :Personal_Statement %>
+    <%= form.text_area :Personal_Statement, :required => true %>
   </p>
 
   <p>
@@ -55,4 +58,3 @@
   </p>
 
  <% end %>
-

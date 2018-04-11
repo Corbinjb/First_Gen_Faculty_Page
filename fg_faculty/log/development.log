@@ -25318,3 +25318,2735 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 786ms (Views: 745.4ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-10 16:04:12 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (2.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (785.9ms)
+Completed 200 OK in 1024ms (Views: 973.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-10 16:15:15 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (89.5ms)
+  Rendered professors/new.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 128ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/professors" for 127.0.0.1 at 2018-04-10 16:15:35 -0700
+Processing by ProfessorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPRP7eavcEyBasIYeLZquHzkLy7zPofTWWBujCLUtSHUSWponEIWMR3cM/qbbkQuJJXX5jlR58iRgvj5R1chcQ==", "professor"=>{"Name"=>"test", "Email"=>"st", "Office"=>"as", "Department"=>"asdf", "Phone_Number"=>"asdf", "Personal_Statement"=>"asdf"}, "commit"=>"Create Professor"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "Email", "Office", "Department", "Phone_Number", "Personal_Statement", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Name", "test"], ["Email", "st"], ["Office", "as"], ["Department", "asdf"], ["Phone_Number", "asdf"], ["Personal_Statement", "asdf"], ["created_at", "2018-04-10 23:15:35.831466"], ["updated_at", "2018-04-10 23:15:35.831466"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/40
+Completed 302 Found in 10ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/professors/40" for 127.0.0.1 at 2018-04-10 16:15:35 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:15:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:15:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:15:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:15:58 -0700
+Started GET "/professors/40" for 127.0.0.1 at 2018-04-10 16:15:58 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 271ms (Views: 243.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:15:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/40/edit" for 127.0.0.1 at 2018-04-10 16:15:59 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (10.5ms)
+  Rendered professors/edit.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 137ms (Views: 114.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:15:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/professors/40" for 127.0.0.1 at 2018-04-10 16:16:05 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8DJaqIvd+YEEEHppRcnjLd9RLUyTHIry3JBNHZzz0jssbJISqPzmQl9wUkfL6oQ7GctVr4ZxSdyJ3vOu7DQAw==", "professor"=>{"Name"=>"test", "Email"=>"st", "Office"=>"as", "Department"=>"asdf", "Phone_Number"=>"asdf", "Personal_Statement"=>"asdf"}, "commit"=>"Update Professor", "id"=>"40"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/40
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/40" for 127.0.0.1 at 2018-04-10 16:16:05 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:16:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:16:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:16:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/40" for 127.0.0.1 at 2018-04-10 16:16:14 -0700
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:16:14 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"40"}
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 241ms (Views: 222.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/40/edit" for 127.0.0.1 at 2018-04-10 16:16:15 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.5ms)
+  Rendered professors/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:16:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/professors/40" for 127.0.0.1 at 2018-04-10 16:16:17 -0700
+Processing by ProfessorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UN3Oe04ApccOSeCJDZ6m1zhNnfrqk/t3Z06uva7SeYvgFhys9xV5OO8u3wo0c2PzG6TxvK5dev4wgxOdlw3GTA==", "id"=>"40"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 40]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:16:17 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-10 16:16:19 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.1ms)
+  Rendered professors/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/professors" for 127.0.0.1 at 2018-04-10 16:16:25 -0700
+Processing by ProfessorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rJdjgtKBA3CGibtwApCA4Se+CL9W6VZeUkJy6SD4wuH4KkYHqGxlDRo/SpLhSK53f8/wd5yGNkWaoOScRXtWsQ==", "professor"=>{"Name"=>"asdf", "Email"=>"asdf", "Office"=>"asdf", "Department"=>"asdf", "Phone_Number"=>"asdf", "Personal_Statement"=>"asfd"}, "commit"=>"Create Professor"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "professors" ("Name", "Email", "Office", "Department", "Phone_Number", "Personal_Statement", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["Name", "asdf"], ["Email", "asdf"], ["Office", "asdf"], ["Department", "asdf"], ["Phone_Number", "asdf"], ["Personal_Statement", "asfd"], ["created_at", "2018-04-10 23:16:25.891468"], ["updated_at", "2018-04-10 23:16:25.891468"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/41
+Completed 302 Found in 10ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/professors/41" for 127.0.0.1 at 2018-04-10 16:16:25 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:16:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:24:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:24:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:24:33 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:24:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:24:41 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.0ms)
+  Rendered professors/edit.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting ')'
+ne_field :Phone_Number pattern="[0-9]{9,10}" );@output_buffe
+                              ^):
+  
+app/views/professors/_form.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/professors/edit.html.erb:1:in `_app_views_professors_edit_html_erb__591508933320861784_70186128760120'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:28:50 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:28:54 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (6.5ms)
+  Rendered professors/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 16:29:45 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5EphyFREHBO/xpmJ3XfewCRTlLETNvcW5ZVLdseuMQ+c9FVSkljbkJx0X6hJH31W/LfpWvW4GYsidHou2DKh8w==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "Phone_Number" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["Phone_Number", "234 234 2345"], ["updated_at", "2018-04-10 23:29:45.904660"], ["id", 34]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:29:45 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:29:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:29:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:31:15 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (3.0ms)
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:31:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:33:39 -0700
+Processing by WelcomeController#index as HTML
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:33:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 428ms (Views: 423.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:33:42 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:33:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 88ms (Views: 84.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:33:43 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.0ms)
+  Rendered professors/edit.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:19: syntax error, unexpected ')'
+xt_field :Name, :required => );@output_buffer.safe_append='
+                              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+end=( form.label :Phone Number );@output_buffer.safe_append=
+                              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:49: syntax error, unexpected tCONSTANT, expecting ')'
+form.label :Personal Statement );@output_buffer.safe_append=
+                              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:57: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  end 
+              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/professors/_form.html.erb:19: syntax error, unexpected ')'
+app/views/professors/_form.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/professors/_form.html.erb:49: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/professors/_form.html.erb:57: syntax error, unexpected keyword_end, expecting ')'
+app/views/professors/_form.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/professors/_form.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+app/views/professors/edit.html.erb:1:in `_app_views_professors_edit_html_erb__591508933320861784_70186130035440'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:34:04 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:34:08 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.1ms)
+  Rendered professors/edit.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+end=( form.label :Phone Number );@output_buffer.safe_append=
+                              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:49: syntax error, unexpected tCONSTANT, expecting ')'
+form.label :Personal Statement );@output_buffer.safe_append=
+                              ^):
+  
+app/views/professors/_form.html.erb:43: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/professors/_form.html.erb:49: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/professors/edit.html.erb:1:in `_app_views_professors_edit_html_erb__591508933320861784_70186128626720'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:35:37 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:35:40 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (7.1ms)
+  Rendered professors/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 16:36:18 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vm8ZtAXBckabVe+7/2ipZFlbUonjIb/CReBPnPz2K1su0S0uw921xbjnKZprAArygb8vYgWvUV+CAX7E42q7pw==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf7486d50 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-omsktu.png>, @original_filename="Harrison Chotzen - Headshot.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Harrison Chotzen - Headshot.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-omsktu.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/245f7f8f375e692ecbe559a94068ff9e20180410-25541-1yil2ve.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/245f7f8f375e692ecbe559a94068ff9e20180410-25541-1yil2ve.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/59f75a6bfd5c3e7a18e24d681b34521920180410-25541-1dxcbii.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/59f75a6bfd5c3e7a18e24d681b34521920180410-25541-1dxcbii.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/245f7f8f375e692ecbe559a94068ff9e20180410-25541-1yil2ve.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/245f7f8f375e692ecbe559a94068ff9e20180410-25541-1yil2ve.png[0]' -auto-orient -resize "128x" -crop "128x128+0+8" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/da57fdf2195b83017846be86c95cc21420180410-25541-xu053z.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/da57fdf2195b83017846be86c95cc21420180410-25541-xu053z.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e7e068048c1def13180563461ee9052320180410-25541-x1xdc1.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/245f7f8f375e692ecbe559a94068ff9e20180410-25541-1yil2ve.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/59f75a6bfd5c3e7a18e24d681b34521920180410-25541-fjyhe.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/59f75a6bfd5c3e7a18e24d681b34521920180410-25541-fjyhe.png'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Harrison_Chotzen_-_Headshot.png"], ["image_file_size", 66196], ["image_updated_at", "2018-04-10 23:36:18.530611"], ["updated_at", "2018-04-10 23:36:18.877021"], ["id", 34]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Screen_Shot_2018-04-05_at_1.17.14_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Screen_Shot_2018-04-05_at_1.17.14_PM.jpg
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 368ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:36:18 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:36:21 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.1ms)
+  Rendered professors/edit.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 55ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:42:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 57ms (Views: 48.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:42:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:42:47 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:42:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 97ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:42:48 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (17.3ms)
+  Rendered professors/edit.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with model: @professor, local: true do |form| %>
+    2: 
+    3:   <% if @professor.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2>
+    6:         <%= pluralize(@professor.errors.count, "error") %> prohibited
+  
+app/views/professors/_form.html.erb:3:in `block in _app_views_professors__form_html_erb__3386887336099348098_70186135438940'
+app/views/professors/_form.html.erb:1:in `_app_views_professors__form_html_erb__3386887336099348098_70186135438940'
+app/views/professors/edit.html.erb:1:in `_app_views_professors_edit_html_erb__591508933320861784_70186135492300'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:42:59 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 29.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:43:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:43:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:43:11 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:43:11 -0700
+  Rendered professors/show.html.erb within layouts/application (2.7ms)
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:43:13 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (11.1ms)
+  Rendered professors/edit.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 16:43:27 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bc8qYL5W7z2Oy3RkwTlJjOrt4sIktyk1RSvJ/L0yqUkVcR76eEoovq15skVVUeoaMgmfKcI5x6iCyvikoq45tQ==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf31908c0 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-wa6wve.png>, @original_filename="Screen Shot 2018-04-05 at 1.17.18 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 1.17.18 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-wa6wve.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f520ddc77960df6ccb2fce17863aeb2b20180410-25541-1pgtqf4.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f520ddc77960df6ccb2fce17863aeb2b20180410-25541-1pgtqf4.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2975cfd2fbc4084529f21e4317f14aa820180410-25541-1y6owwk.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2975cfd2fbc4084529f21e4317f14aa820180410-25541-1y6owwk.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f520ddc77960df6ccb2fce17863aeb2b20180410-25541-1pgtqf4.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f520ddc77960df6ccb2fce17863aeb2b20180410-25541-1pgtqf4.png[0]' -auto-orient -resize "x128" -crop "128x128+3+0" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/676525d4f41398f33a07fe5e64c1a85e20180410-25541-1o0wqeb.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/676525d4f41398f33a07fe5e64c1a85e20180410-25541-1o0wqeb.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/b57e48e5c03a9042cf6c1ac1fa9477fa20180410-25541-qbyemq.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f520ddc77960df6ccb2fce17863aeb2b20180410-25541-1pgtqf4.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2975cfd2fbc4084529f21e4317f14aa820180410-25541-5zozrs.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2975cfd2fbc4084529f21e4317f14aa820180410-25541-5zozrs.png'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_1.17.18_PM.png"], ["image_file_size", 232596], ["image_updated_at", "2018-04-10 23:43:27.921802"], ["updated_at", "2018-04-10 23:43:28.029990"], ["id", 34]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Harrison_Chotzen_-_Headshot.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Harrison_Chotzen_-_Headshot.jpg
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 128ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:43:28 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:43:31 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:43:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:43:44 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:43:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:43:51 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (7.9ms)
+  Rendered professors/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:46:39 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.4ms)
+  Rendered professors/edit.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:43: syntax error, unexpected '(', expecting ')'
+d=( form.label :Phone_Number_(000_000_0000)  );@output_buffe
+                              ^
+/Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/app/views/professors/_form.html.erb:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/professors/_form.html.erb:43: syntax error, unexpected '(', expecting ')'
+app/views/professors/_form.html.erb:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/professors/edit.html.erb:1:in `_app_views_professors_edit_html_erb__591508933320861784_70186129147980'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:48:24 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:48:26 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.3ms)
+  Rendered professors/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 16:48:35 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8t7KBgo9Dz9Qn3PjLDRtjNWtmfHji5Xp3byuZRHAskeKYP6czCHIvHMttcK4XM4aDUnkGgUFe3QaXZ89Dlwiuw==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf6a69a70 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-toccl1.png>, @original_filename="Screen Shot 2018-04-05 at 1.17.26 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 1.17.26 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-toccl1.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-1or4by6.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-1or4by6.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-lo7y61.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-lo7y61.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-1or4by6.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-1or4by6.png[0]' -auto-orient -resize "128x" -crop "128x128+0+2" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/5f76edb18f0efaa226c07f0618c246b020180410-25541-yzxxm5.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/5f76edb18f0efaa226c07f0618c246b020180410-25541-yzxxm5.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/613297affeccb90b923015ff3783709e20180410-25541-5ecna0.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-1or4by6.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1y6p27i.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1y6p27i.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_1.17.26_PM.png"], ["image_file_size", 175611], ["image_updated_at", "2018-04-10 23:48:35.044099"], ["updated_at", "2018-04-10 23:48:35.134446"], ["id", 34]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Screen_Shot_2018-04-05_at_1.17.18_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Screen_Shot_2018-04-05_at_1.17.18_PM.jpg
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 112ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:48:35 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:48:41 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:48:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:48:49 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:48:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:48:52 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.4ms)
+  Rendered professors/edit.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 58ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:48:58 -0700
+Processing by WelcomeController#index as HTML
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:48:58 -0700
+  
+  Rendering welcome/index.html.erb within layouts/application
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 271ms (Views: 268.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:49:01 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:49:01 -0700
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:49:08 -0700
+Processing by WelcomeController#index as HTML
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:49:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+  Rendering welcome/index.html.erb within layouts/application
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 351ms (Views: 347.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:49:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-10 16:49:11 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (6.6ms)
+  Rendered professors/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:49:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-10 16:53:28 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.1ms)
+  Rendered professors/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 16:53:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:53:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:53:34 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 16:53:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:53:35 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.6ms)
+  Rendered professors/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 66ms (Views: 60.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:53:57 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.3ms)
+  Rendered professors/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:54:10 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.1ms)
+  Rendered professors/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 16:54:12 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:55:09 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.2ms)
+  Rendered professors/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 77ms (Views: 70.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:55:43 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.3ms)
+  Rendered professors/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:58:02 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (7.0ms)
+  Rendered professors/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:58:09 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.6ms)
+  Rendered professors/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:58:43 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.7ms)
+  Rendered professors/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:59:39 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.4ms)
+  Rendered professors/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 16:59:57 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.0ms)
+  Rendered professors/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 17:01:23 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AB9icTZDhq1Pnjo3KRJurqVFstUqaLr3jD0WncmyMlyw1LCmj1ZaUq75BbQQ/6uKhqzek26mO37b8Ku98G2Nmw==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf3ab3740 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-1b9o7ei.png>, @original_filename="Screen Shot 2018-04-05 at 1.17.36 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 1.17.36 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-1b9o7ei.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/786333ad56675d92bcd07ca2d587b28120180410-25541-1nzpylc.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/786333ad56675d92bcd07ca2d587b28120180410-25541-1nzpylc.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/58411ba7dd49434c31806bb4788cd38c20180410-25541-10lyzdv.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/58411ba7dd49434c31806bb4788cd38c20180410-25541-10lyzdv.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/786333ad56675d92bcd07ca2d587b28120180410-25541-1nzpylc.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/786333ad56675d92bcd07ca2d587b28120180410-25541-1nzpylc.png[0]' -auto-orient -resize "128x" -crop "128x128+0+4" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/23de457784bf896bbd3f6314b3dcd84820180410-25541-1m5tqwg.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/23de457784bf896bbd3f6314b3dcd84820180410-25541-1m5tqwg.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/c37164a8e5a0d12fece844ed0a331d1b20180410-25541-1g8ytv7.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/786333ad56675d92bcd07ca2d587b28120180410-25541-1nzpylc.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/58411ba7dd49434c31806bb4788cd38c20180410-25541-14bxn4n.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/58411ba7dd49434c31806bb4788cd38c20180410-25541-14bxn4n.png'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_1.17.36_PM.png"], ["image_file_size", 155190], ["image_updated_at", "2018-04-11 00:01:23.675477"], ["updated_at", "2018-04-11 00:01:23.849390"], ["id", 34]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Screen_Shot_2018-04-05_at_1.17.26_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Screen_Shot_2018-04-05_at_1.17.26_PM.jpg
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 195ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 17:01:23 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:01:28 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (7.9ms)
+  Rendered professors/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:04:26 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.4ms)
+  Rendered professors/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:05:57 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.5ms)
+  Rendered professors/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:07:30 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.3ms)
+  Rendered professors/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:08:00 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.4ms)
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:08:37 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.4ms)
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:09:26 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.6ms)
+  Rendered professors/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:09:44 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.4ms)
+  Rendered professors/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:11:28 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (5.4ms)
+  Rendered professors/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:11:32 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (15.9ms)
+  Rendered professors/edit.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:12:10 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.8ms)
+  Rendered professors/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:15:00 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.5ms)
+  Rendered professors/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:16:31 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.5ms)
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:17:42 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.6ms)
+  Rendered professors/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:18:39 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.5ms)
+  Rendered professors/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 17:18:54 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 67ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:18:56 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.3ms)
+  Rendered professors/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 83ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:19:30 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.5ms)
+  Rendered professors/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:20:38 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.3ms)
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:26:48 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.3ms)
+  Rendered professors/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:30:52 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.6ms)
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:31:12 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.7ms)
+  Rendered professors/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 17:31:26 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.4ms)
+  Rendered professors/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 17:31:35 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 73ms (Views: 64.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 17:31:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 69ms (Views: 64.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 17:31:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/41" for 127.0.0.1 at 2018-04-10 17:32:06 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 17:32:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/professors/41/edit" for 127.0.0.1 at 2018-04-10 17:32:08 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.1ms)
+  Rendered professors/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/thumb/missing.png" for 127.0.0.1 at 2018-04-10 17:32:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/professors/41" for 127.0.0.1 at 2018-04-10 17:32:10 -0700
+Processing by ProfessorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G3/WwjHcbXixK4eMnReKfSt8KUD3x2b95YawYHIBUwmrtAQViMmxh1BMuA+k+k9ZCJVFBrMJ53SySw1AS97szg==", "id"=>"41"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 41]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 17:32:10 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:32:15 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (1.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-10 17:32:21 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.7ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (11.8ms)
+  Rendered professors/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 17:32:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:32:44 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-10 17:32:45 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.9ms)
+  Rendered professors/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 17:32:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:32:50 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:35:38 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:36:55 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:37:14 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:38:36 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:39:03 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:39:05 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:39:13 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:40:23 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:40:38 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:41:54 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-10 17:43:41 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (8.2ms)
+  Rendered professors/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/35" for 127.0.0.1 at 2018-04-10 17:44:14 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"85pxSsEPXzqzJzOYzGFV0xjl1gCxOPhHZageut6u8Y+f5C+hXZO/JrgGpuuqfMzwZI5wJIf9OBA8yj+s9ZPN7Q==", "professor"=>{"Name"=>"Professor Bethurem", "Email"=>"cb@cmc.edu", "Office"=>"Roberts", "Department"=>"Fitness", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf7568b60 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-1keg0sy.png>, @original_filename="Screen Shot 2018-04-05 at 1.17.26 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 1.17.26 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"123 345 6789", "Personal_Statement"=>"The Boston Red Sox are an American professional baseball team based in Boston, Massachusetts. The Red Sox compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. The Red Sox have won eight World Series championships and have played in twelve. Founded in 1901 as one of the American League's eight charter franchises, the Red Sox' home ballpark has been Fenway Park since 1912. The \"Red Sox\" name was chosen by the team owner, John I. Taylor, around 1908, following the lead of previous teams that had been known as the \"Boston Red Stockings\", including the forerunner of the Atlanta Braves.\r\n\r\nBoston was a dominant team in the new league, defeating the Pittsburgh Pirates in the first World Series in 1903 and winning four more championships by 1918. However, they then went into one of the longest championship droughts in baseball history, dubbed the \"Curse of the Bambino\" after its alleged beginning with the Red Sox' sale of Babe Ruth to the rival New York Yankees two years after their world championship in 1918, an 86-year wait before the team's sixth World Championship in 2004. The team's history during that period was punctuated with some of the most memorable moments in World Series history, including Enos Slaughter's \"mad dash\" in 1946, the \"Impossible Dream\" of 1967, Carlton Fisk's home run in 1975, and Bill Buckner's error in 1986. Following their victory in the 2013 World Series, they became the first team to win three World Series trophies in the 21st century, including championships in 2004 and 2007. Red Sox history has also been marked by the team's intense rivalry with the Yankees, arguably the fiercest and most historic in North American professional sports.[2][3][4]"}, "commit"=>"Update Professor", "id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-1keg0sy.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-q9u5oq.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-q9u5oq.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1qmd4p1.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1qmd4p1.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-q9u5oq.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-q9u5oq.png[0]' -auto-orient -resize "128x" -crop "128x128+0+2" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/4bc93ef90faaf454b6107d075eda4abb20180410-25541-1ujy9zb.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/4bc93ef90faaf454b6107d075eda4abb20180410-25541-1ujy9zb.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/27595e16db8042c34fbe085f2efe53eb20180410-25541-18r6s99.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/2ac72b1be77ec93f1f5741d1a959d66920180410-25541-q9u5oq.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1bpwf1p.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/130d6147281f2e1bd6edb1a0653f440d20180410-25541-1bpwf1p.png'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "Phone_Number" = ?, "Personal_Statement" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_1.17.26_PM.png"], ["image_file_size", 175611], ["image_updated_at", "2018-04-11 00:44:14.944894"], ["Phone_Number", "123 345 6789"], ["Personal_Statement", "The Boston Red Sox are an American professional baseball team based in Boston, Massachusetts. The Red Sox compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. The Red Sox have won eight World Series championships and have played in twelve. Founded in 1901 as one of the American League's eight charter franchises, the Red Sox' home ballpark has been Fenway Park since 1912. The \"Red Sox\" name was chosen by the team owner, John I. Taylor, around 1908, following the lead of previous teams that had been known as the \"Boston Red Stockings\", including the forerunner of the Atlanta Braves.\r\n\r\nBoston was a dominant team in the new league, defeating the Pittsburgh Pirates in the first World Series in 1903 and winning four more championships by 1918. However, they then went into one of the longest championship droughts in baseball history, dubbed the \"Curse of the Bambino\" after its alleged beginning with the Red Sox' sale of Babe Ruth to the rival New York Yankees two years after their world championship in 1918, an 86-year wait before the team's sixth World Championship in 2004. The team's history during that period was punctuated with some of the most memorable moments in World Series history, including Enos Slaughter's \"mad dash\" in 1946, the \"Impossible Dream\" of 1967, Carlton Fisk's home run in 1975, and Bill Buckner's error in 1986. Following their victory in the 2013 World Series, they became the first team to win three World Series trophies in the 21st century, including championships in 2004 and 2007. Red Sox history has also been marked by the team's intense rivalry with the Yankees, arguably the fiercest and most historic in North American professional sports.[2][3][4]"], ["updated_at", "2018-04-11 00:44:15.135959"], ["id", 35]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/035/original/Screen_Shot_2018-04-05_at_12.52.55_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/035/thumb/Screen_Shot_2018-04-05_at_12.52.55_PM.jpg
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/35
+Completed 302 Found in 212ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:44:15 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:45:36 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-10 17:46:03 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (19.7ms)
+  Rendered professors/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 75ms (Views: 69.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/35" for 127.0.0.1 at 2018-04-10 17:46:10 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z+Q0eIR+QCI101qHYn8H5uo3jxLgGNVNTXbuR/Dk9IijmmqTGOKgPj7yz/QEYp7FllwpNtbdFRoUFM9R29nI6g==", "professor"=>{"Name"=>"Professor Bethurem", "Email"=>"cb@cmc.edu", "Office"=>"Roberts", "Department"=>"Fitness", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faaf75d7bc8 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-43yiuc.png>, @original_filename="Screen Shot 2018-04-05 at 12.52.36 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 12.52.36 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"123 345 6789", "Personal_Statement"=>"The Boston Red Sox are an American professional baseball team based in Boston, Massachusetts. The Red Sox compete in Major League Baseball (MLB) as a member club of the American League (AL) East division. The Red Sox have won eight World Series championships and have played in twelve. Founded in 1901 as one of the American League's eight charter franchises, the Red Sox' home ballpark has been Fenway Park since 1912. The \"Red Sox\" name was chosen by the team owner, John I. Taylor, around 1908, following the lead of previous teams that had been known as the \"Boston Red Stockings\", including the forerunner of the Atlanta Braves.\r\n\r\nBoston was a dominant team in the new league, defeating the Pittsburgh Pirates in the first World Series in 1903 and winning four more championships by 1918. However, they then went into one of the longest championship droughts in baseball history, dubbed the \"Curse of the Bambino\" after its alleged beginning with the Red Sox' sale of Babe Ruth to the rival New York Yankees two years after their world championship in 1918, an 86-year wait before the team's sixth World Championship in 2004. The team's history during that period was punctuated with some of the most memorable moments in World Series history, including Enos Slaughter's \"mad dash\" in 1946, the \"Impossible Dream\" of 1967, Carlton Fisk's home run in 1975, and Bill Buckner's error in 1986. Following their victory in the 2013 World Series, they became the first team to win three World Series trophies in the 21st century, including championships in 2004 and 2007. Red Sox history has also been marked by the team's intense rivalry with the Yankees, arguably the fiercest and most historic in North American professional sports.[2][3][4]"}, "commit"=>"Update Professor", "id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-25541-43yiuc.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/0a4d638bbb1a25b859185d828aa5474520180410-25541-mt1fbg.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/0a4d638bbb1a25b859185d828aa5474520180410-25541-mt1fbg.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e3c1e6c3a060ddcb3dc8fd880348b78720180410-25541-w50svf.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e3c1e6c3a060ddcb3dc8fd880348b78720180410-25541-w50svf.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/0a4d638bbb1a25b859185d828aa5474520180410-25541-mt1fbg.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/0a4d638bbb1a25b859185d828aa5474520180410-25541-mt1fbg.png[0]' -auto-orient -resize "128x" -crop "128x128+0+0" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/90257655abeff70f2567c8085e0490b520180410-25541-1e1qat0.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/90257655abeff70f2567c8085e0490b520180410-25541-1e1qat0.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/6eae02e7933cb84926ce80349be80c4820180410-25541-1lcaqwz.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/0a4d638bbb1a25b859185d828aa5474520180410-25541-mt1fbg.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e3c1e6c3a060ddcb3dc8fd880348b78720180410-25541-1b3p7kr.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e3c1e6c3a060ddcb3dc8fd880348b78720180410-25541-1b3p7kr.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_12.52.36_PM.png"], ["image_file_size", 260468], ["image_updated_at", "2018-04-11 00:46:10.365981"], ["updated_at", "2018-04-11 00:46:10.463674"], ["id", 35]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/035/original/Screen_Shot_2018-04-05_at_1.17.26_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/035/thumb/Screen_Shot_2018-04-05_at_1.17.26_PM.jpg
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/35
+Completed 302 Found in 137ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:46:10 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:46:50 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:47:50 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:48:55 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:50:10 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:53:46 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:54:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:56:02 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 17:59:39 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:01:12 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:01:35 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:04:48 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:05:22 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:06:23 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:09:27 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:10:35 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:13:29 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:14:16 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:16:19 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:17:36 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:18:19 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 18:18:45 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 22:28:22 -0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (2.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (559.5ms)
+Completed 200 OK in 795ms (Views: 754.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 22:28:31 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 34.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-10 22:28:53 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (84.2ms)
+  Rendered professors/edit.html.erb within layouts/application (91.8ms)
+Completed 200 OK in 153ms (Views: 146.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-10 22:34:06 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1kwsdJ17xP8Bdu3nQXlnve4Tfenl0KQiEd4lLGNf4lb5wQrFGkokN+3HZYJbUYIL1wwHEEZrA1PpknMrhHvdQ==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"olin121", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9bf98311d8 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-97371-1jc3kg1.png>, @original_filename="Screen Shot 2018-04-05 at 1.17.14 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 1.17.14 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"234 234 2345", "Personal_Statement"=>"Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !"}, "commit"=>"Update Professor", "id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-97371-1jc3kg1.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/d202f252781c4f18d8aa31c9a5792c3220180410-97371-15rxobi.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/d202f252781c4f18d8aa31c9a5792c3220180410-97371-15rxobi.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/35cc9dbf627eaf45bd6166024c97529820180410-97371-1ls13y4.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/35cc9dbf627eaf45bd6166024c97529820180410-97371-1ls13y4.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/d202f252781c4f18d8aa31c9a5792c3220180410-97371-15rxobi.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/d202f252781c4f18d8aa31c9a5792c3220180410-97371-15rxobi.png[0]' -auto-orient -resize "x128" -crop "128x128+16+0" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/b4dbcf75fe55153512f7c8cbc2cc2e0e20180410-97371-1m85lzp.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/b4dbcf75fe55153512f7c8cbc2cc2e0e20180410-97371-1m85lzp.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/f42684f01e837778334368da45bd8e6320180410-97371-1r6q1km.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/d202f252781c4f18d8aa31c9a5792c3220180410-97371-15rxobi.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/35cc9dbf627eaf45bd6166024c97529820180410-97371-a7ewyf.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/35cc9dbf627eaf45bd6166024c97529820180410-97371-a7ewyf.png'
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "Personal_Statement" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_1.17.14_PM.png"], ["image_file_size", 180963], ["image_updated_at", "2018-04-11 05:34:06.827016"], ["Personal_Statement", "Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !"], ["updated_at", "2018-04-11 05:34:07.017598"], ["id", 34]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Screen_Shot_2018-04-05_at_1.17.36_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Screen_Shot_2018-04-05_at_1.17.36_PM.jpg
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 210ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-10 22:34:07 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 22:35:18 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/36" for 127.0.0.1 at 2018-04-10 22:35:47 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 59ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/36/edit" for 127.0.0.1 at 2018-04-10 22:35:51 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.6ms)
+  Rendered professors/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/professors/36" for 127.0.0.1 at 2018-04-10 22:36:08 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mnd8ikD5TJ0avtZs3uslJfm15Y+/ailO9e1wN7A3auZDQ+fgb7U4Iv1AirfR2QP2CLxVcyC93pZfFPWW767Vcw==", "professor"=>{"Name"=>"Professor Esbenshade", "Email"=>"je@cmc.edu", "Office"=>"chall130", "Department"=>"Poker", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9bf3368af8 @tempfile=#<Tempfile:/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-97371-a33z6h.png>, @original_filename="Screen Shot 2018-04-05 at 12.53.44 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"Screen Shot 2018-04-05 at 12.53.44 PM.png\"\r\nContent-Type: image/png\r\n">, "Phone_Number"=>"456 789 4530", "Personal_Statement"=>"Hello !"}, "commit"=>"Update Professor", "id"=>"36"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/RackMultipart20180410-97371-a33z6h.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ba98a22f54fd5f74abd94ae89078f95a20180410-97371-q7vy21.png
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ba98a22f54fd5f74abd94ae89078f95a20180410-97371-q7vy21.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ec419cc6c24bbaaf96b106fdf76a036120180410-97371-10m9bkd.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ec419cc6c24bbaaf96b106fdf76a036120180410-97371-10m9bkd.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ba98a22f54fd5f74abd94ae89078f95a20180410-97371-q7vy21.png[0]' 2>/dev/null
+Command :: convert '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ba98a22f54fd5f74abd94ae89078f95a20180410-97371-q7vy21.png[0]' -auto-orient -resize "x128" -crop "128x128+11+0" +repage '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e8ef2186032ecea4f5abfe05e03be18d20180410-97371-7afa84.jpg'
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/e8ef2186032ecea4f5abfe05e03be18d20180410-97371-7afa84.jpg to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/75c599e0dd18e09c67f382604f9145e520180410-97371-4495v0.jpg
+[paperclip] Trying to link /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ba98a22f54fd5f74abd94ae89078f95a20180410-97371-q7vy21.png to /var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ec419cc6c24bbaaf96b106fdf76a036120180410-97371-7mqp6.png
+Command :: file -b --mime '/var/folders/pg/r42v7p152t7g0pz66nr1pg900000gn/T/ec419cc6c24bbaaf96b106fdf76a036120180410-97371-7mqp6.png'
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "Phone_Number" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "Screen_Shot_2018-04-05_at_12.53.44_PM.png"], ["image_file_size", 188609], ["image_updated_at", "2018-04-11 05:36:08.636265"], ["Phone_Number", "456 789 4530"], ["updated_at", "2018-04-11 05:36:08.736282"], ["id", 36]]
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/036/original/Screen_Shot_2018-04-05_at_12.53.58_PM.png
+[paperclip] deleting /Users/harrisonchotzen/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/036/thumb/Screen_Shot_2018-04-05_at_12.53.58_PM.jpg
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/36
+Completed 302 Found in 130ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/professors/36" for 127.0.0.1 at 2018-04-10 22:36:08 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 22:36:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-10 22:36:18 -0700
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.5ms)
+  Rendered professors/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 50ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-10 22:36:20 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-10 22:52:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 0.1ms)
+
+
