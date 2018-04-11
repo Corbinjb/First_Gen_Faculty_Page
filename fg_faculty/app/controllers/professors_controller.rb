@@ -26,14 +26,14 @@ class ProfessorsController < ApplicationController
     end
   end
 
-  def update 
+  def update
     @professor = Professor.find(params[:id])
- 
+
     if @professor.update(professor_params)
       redirect_to @professor
     else
       render 'edit'
-    end  
+    end
   end
 
   def destroy
@@ -45,6 +45,6 @@ class ProfessorsController < ApplicationController
 
   private
     def professor_params
-      params.require(:professor).permit(:Name, :Email, :Office, :Department, :image, :Phone_Number, :Personal_Statement)
+      params.require(:professor).permit(:Name, :Email, :Office, :Department, :image, :Phone_Number, :Nationality, :Personal_Statement)
     end
 end

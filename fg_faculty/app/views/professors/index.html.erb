@@ -8,6 +8,7 @@
     <th>Office</th>
     <th>Department</th>
     <th>Phone</th>
+    <th>Nationality</th>
     <th>Personal Statement</th>
   </tr>
 
@@ -19,10 +20,11 @@
       <td><%= professor.Department %></td>
       <td><%= professor.Email %></td>
       <td><%= professor.Phone_Number %></td>
+      <td><%= professor.Nationality %></td>
       <td><%= professor.Personal_Statement %></td>
       <td><%= link_to 'Show', professor_path(professor) %></td><br>
       <td><%= link_to 'Edit', edit_professor_path(professor) %></td><br>
-      <td><%= link_to 'Destroy', professor_path(professor), 
+      <td><%= link_to 'Destroy', professor_path(professor),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>

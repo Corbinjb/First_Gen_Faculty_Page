@@ -3,8 +3,8 @@
 
   <!-- Introduction Row -->
   <body style="background-color:FloralWhite; text-align: center">
-  <h1 class="my-4">FirstGen Faculty Network</h1>
-  <p>This site is a tool to connect FirstGen students at HMC with FirstGen Faculty. All Faculty who have profiles here were, at a time, FirstGen students themselves. These faculty self-selected to be mentors and are eager to meet and build relationships with the FirstGen student community at HMC.</p>
+  <h1 class="my-4">International Faculty Network</h1>
+  <p>This site is a tool to connect international students at HMC with faculty that were international students during their undergraduate education. These faculty self-selected to be mentors and are eager to meet and build relationships with the international student community at HMC.</p>
 
   <%=image_tag("HMC_OID_website_header_photo.jpg")%>
   <!-- Team Members Row -->
@@ -21,6 +21,7 @@
         <p>Office: <%= professor.Office %></p>
         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
         <p>Phone Number: <%= professor.Phone_Number %></p>
+        <p>Nationality: <%= professor.Nationality %></p>
       </div>
       <% end %>
 
