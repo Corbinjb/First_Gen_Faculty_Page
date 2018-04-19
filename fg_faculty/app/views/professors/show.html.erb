@@ -24,7 +24,7 @@
 <div class="row">
   <div class="column">
      <p style="padding-top: 25px">
-       <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), @professor.image.url, target: '_blank' %>
+       <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), professor_path(@professor)%>
      </p>
 
   </div>
@@ -36,12 +36,12 @@
      </p>
 
      <p>
-      	 <strong>Office:</strong>
+      	 <strong>Dorm:</strong>
          <%= @professor.Office %>
      </p>
 
      <p>
-       	 <strong>Department:</strong>
+       	 <strong>Major:</strong>
          <%= @professor.Department %>
     </p>
 

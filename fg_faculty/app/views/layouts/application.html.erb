@@ -28,11 +28,19 @@
           <%= link_to( "Home", welcome_index_path) %>
         </li>
         <li class="nav-item">
-          <%= link_to( "Mentor Login", new_user_session_path) %>
-        </li>
-        <li class="nav-item">
-          <%= link_to( "Mentor Logout", destroy_user_session_path, method: :delete) %>
-        </li>
+                <a href="mailto:oid@hmc.edu">Contact</a>
+      	</li>
+        <%-if !user_signed_in? %>
+
+          <li class="nav-item">
+            <%= link_to( "Admin", new_user_session_path) %>
+          </li>
+        <% end -%>
+        <%-if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to( "Logout", destroy_user_session_path, method: :delete) %>
+          </li>
+        <% end -%>
       </ul>
     </div>
   </div>

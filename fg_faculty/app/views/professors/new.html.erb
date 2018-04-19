@@ -1,10 +1,71 @@
-<body style="margin-left: 15px; margin-top: 20px; background-color: FloralWhite; text-align: center;"" >
+<body style="margin-left: 15px; margin-top: 20px; background-color: FloralWhite;"" >
 
 <h2>
   Create a Mentor Profile
 </h2>
 
-<%= render 'form' %>
+<%= form_with model: @professor, local: true do |form| %>
+
+  <% if @professor.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@professor.errors.count, "error") %> prohibited
+        this professor from being saved:
+      </h2>
+      <ul>
+        <% @professor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end%>
+
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :Name, :required => true %>
+  </p>
+
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :Email, :required => true %>
+  </p>
+
+  <p>
+    <%= form.label :Dorm %><br>
+    <%= form.text_field :Dorm %>
+  </p>
+
+  <p>
+    <%= form.label :Major %><br>
+    <%= form.text_field :Major, :required => true %>
+  </p>
+
+  <p>
+    <%= form.label :image %><br>
+    <%= form.file_field :image, :required => true %>
+  </p>
+
+  <p>
+    <%= form.label :Phone_Number %><br>
+    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}" %>
+  </p>
+
+  <p>
+    <%= form.label :Nationality %><br>
+    <%= form.telephone_field :Nationality, :required => true %>
+  </p>
+
+
+  <p>
+    <%= form.label :Personal_Statement %><br>
+    <%= form.text_area :Personal_Statement, :required => true %>
+  </p>
+
+  <p>
+    <%= form.submit 'Create Mentor Profile' %>
+  </p>
+
+ <% end %>
 
 <%= link_to 'Back', welcome_index_path %>
 

@@ -1,4 +1,11 @@
 <!-- Page Content -->
+<style>
+.col-lg-4 col-sm-6 text-center mb-4 {
+  text-align: left;
+}
+</style>
+
+
 <div class="container">
 
   <!-- Introduction Row -->
@@ -14,11 +21,11 @@
       <p><%= link_to 'Become a Mentor', new_professor_path %></p>
     </div>
     <% @professors.each do |professor| %>
-      <div class="col-lg-4 col-sm-6 text-center mb-4">
-        <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor.image.url(:thumb), target: '_blank' %>
+      <div class="col-lg-4 col-sm-6 text-center mb-4" style="text-align: left">
+        <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%>
         <h5><%= link_to professor.Name, professor_path(professor) %></h5>
-        <p>Department: <%= professor.Department %></p>
-        <p>Office: <%= professor.Office %></p>
+        <p>Major: <%= professor.Department %></p>
+        <p>Dorm: <%= professor.Office %></p>
         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
         <p>Phone Number: <%= professor.Phone_Number %></p>
         <p>Nationality: <%= professor.Nationality %></p>

@@ -31624,3 +31624,1146 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-19 14:56:05 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (498.0ms)
+Completed 200 OK in 702ms (Views: 685.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 14:56:11 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 54ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 14:56:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 14:56:19 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nqEPvO7HKdEWlR277/hLjhsLS1+s46M9hmXNIsjeIFkGw7cBuGpkxDek1S9n1F5GTMCUhES4yhq/qkCd/nvPKg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 14:56:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 14:56:20 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 71ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 14:56:36 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FZ+/j4HHdr4GyOYvf7KOfEaMVru85KQY5rf+x3A6UmQUHUqygZknZT7lMZKKgM5QNFg1WTG4g2fd9HQB3bczAg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asdfsd@yahoo.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FZ+/j4HHdr4GyOYvf7KOfEaMVru85KQY5rf+x3A6UmQUHUqygZknZT7lMZKKgM5QNFg1WTG4g2fd9HQB3bczAg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 201ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 14:56:38 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txogMig2+RWKrEu8MLRMYuaN/H5KvRvlvDgr6E+gog+xmTsFLIJ2wGMDVSQZ58E1y9hI6hJ0+6ra5WYfexlhHg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txogMig2+RWKrEu8MLRMYuaN/H5KvRvlvDgr6E+gog+xmTsFLIJ2wGMDVSQZ58E1y9hI6hJ0+6ra5WYfexlhHg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 14:56:40 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fXYlVk/vb3vDTRjVWn5BIdB9MOJCT3/1HxF9SdsvTq979T5hS1vgririBk1zLcx2/SiEdhqGn7p5zDC+75aNvg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asdfsd@yahoo.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fXYlVk/vb3vDTRjVWn5BIdB9MOJCT3/1HxF9SdsvTq979T5hS1vgririBk1zLcx2/SiEdhqGn7p5zDC+75aNvg==", "user"=>{"email"=>"asdfsd@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 174ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:01:30 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/c/AMJPXWX1cqSO4V0qZngbUbOV1zJs6kx1rZxJGFzj7TNsHl2PWqLUGPSB+GRTJK4HYcS0Fe3X1wCaQJv/UKQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:01:30.411342"], ["last_sign_in_at", "2018-04-18 21:03:02.662671"], ["sign_in_count", 11], ["updated_at", "2018-04-19 22:01:30.412064"], ["id", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:01:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:06:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:15:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:15:29 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ce80PP+kLv/b6l5c43pX9g3LD21hUJYqHtywsKBkdvN6kHW9/TTQlidpTW4SfOlEwXlOdc1dJeuRxArKPxvVrQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:15:29 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:15:30 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:15:31 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqQSPQkMJwMSujjJFNBxclmnd+tDX9uwdBK/hOAodk33Yp+mG33Ylbclc3pKhjiNmbOPvxG4t3teOKB9t25kTw==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:15:31.913460"], ["last_sign_in_at", "2018-04-19 22:01:30.411342"], ["sign_in_count", 12], ["updated_at", "2018-04-19 22:15:31.914144"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:15:31 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:16:11 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QdtaLyKBufjeszvjxA0gxBXcaq3B147aXO0xdg+71ikMAcvUkQJU+mjTzBFTp7oZ/W7qa2GKlBTupNLhppucCQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:16:11 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:16:14 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:16:16 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bQKmPGOZ42RHSIucysybb+e7CvihE8zfhcsNZYulBemv6vARttaPsr5XpA+CAOjVn6XQlcoqD86vyIgCdQA7Uw==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:16:16.263971"], ["last_sign_in_at", "2018-04-19 22:15:31.913460"], ["sign_in_count", 13], ["updated_at", "2018-04-19 22:16:16.264729"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 151ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:16:16 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:16:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:17:06 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:17:10 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S3ra2KjTU2rRgg34OTutXmq1qQG3nAVnbeOPpVRkZbjOUjHBEPEu2/BD79GPnrW4JIZVI7nnpqKT8EW3cbrnzQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:17:10 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:17:12 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:17:13 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nodTub2yDV3QHgcLwCBGJCM5sNUDAt311Lndvq64imqLVNMcNiwFsZ/PneO2y3VZWqZ764eXAVZPtxuvxIwXlQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:17:13.981804"], ["last_sign_in_at", "2018-04-19 22:16:16.263971"], ["sign_in_count", 14], ["updated_at", "2018-04-19 22:17:13.982420"], ["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 152ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:17:14 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:18:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-19 15:18:56 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-19 15:19:34 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:20:16 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (9.3ms)
+  Rendered professors/edit.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:21:04 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.1ms)
+  Rendered professors/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:22:55 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.8ms)
+  Rendered professors/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:24:15 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.2ms)
+  Rendered professors/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:24:18 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.1ms)
+  Rendered professors/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:24:42 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.2ms)
+  Rendered professors/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:24:44 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.1ms)
+  Rendered professors/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-19 15:24:46 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:24:48 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.0ms)
+  Rendered professors/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:25:04 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (18.2ms)
+  Rendered professors/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 323ms (Views: 278.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:25:47 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.7ms)
+  Rendered professors/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-19 15:26:24 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/_form.html.erb (2.9ms)
+  Rendered professors/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:26:35 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:26:44 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4BAw7bs5s212YwzG3h1Wd0LyJArZcTzadA0AqYv477ppwPNAZH/9wPnbT56qMnENkM0aiaPQSA05L2MO5WTTXA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:26:44 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:26:47 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:26:48 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8U6Ots4V0ihdn8kcFpNj54ROYqkDPzMq1o1Pw6j4qnyXCnEqk5TNrpjzV5Mj0pO6ERSquu/HP4omv/+tbu5BA==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:26:48.884011"], ["last_sign_in_at", "2018-04-19 22:17:13.981804"], ["sign_in_count", 15], ["updated_at", "2018-04-19 22:26:48.884671"], ["id", 2]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:26:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:27:11 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m5+45IN3TBTKUqusLv7GV0Pyrj+CEcpprZREU7jSilDW9uraUU9tN+vn4Z5c1/A/iZuBWU2BJgY3s1jxGOlAOg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:27:11 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:27:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:27:15 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DS7SR2UNmGmUtDSP4Hrw0JDswLMNqHWhl3YmPYT5J6sch91HOOYr15wpXQPCh0jBcyUHTn5XfXhEs+jMi9dXNQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:27:15.974412"], ["last_sign_in_at", "2018-04-19 22:26:48.884011"], ["sign_in_count", 16], ["updated_at", "2018-04-19 22:27:15.974987"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 155ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:27:15 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:27:52 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TQtoPVzqBFD0RxpjzcbDRwuQ2k22CDuoZ17awEwgyEXmq9PqvKZlbiyKyr45JGjg1AvXbIQ0b76HLjVT7pnejw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:27:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:32:49 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:32:51 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:34:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:34:13 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:35:26 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:35:58 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:36:41 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:37:21 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:38:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:39:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:40:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:40:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:41:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:41:53 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:42:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:46:31 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:46:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:46:35 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:46:36 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:46:50 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-19 15:46:52 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/36" for 127.0.0.1 at 2018-04-19 15:46:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:47:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:47:04 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:47:32 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (256.8ms)
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `professor' for #<#<Class:0x00007fb2176b25f8>:0x00007fb217f32f20>
+Did you mean?  @professor):
+    24: <div class="row">
+    25:   <div class="column">
+    26:      <p style="padding-top: 25px">
+    27:        <%= link_to image_tag(@professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%>
+    28:      </p>
+    29: 
+    30:   </div>
+  
+app/views/professors/show.html.erb:27:in `_app_views_professors_show_html_erb__238637565678591198_70201441361020'
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:47:45 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:47:46 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:47:47 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:47:50 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:48:24 -0700
+Processing by ProfessorsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:48:24 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:48:26 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kbMEFQhwnf3JcugYM+EK4Sf1O3cYQ3gSBd5+kqMy5gFlurdbrT8mslReNUBf/edVKooZVRCitfO3vuvUWBpLKQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:48:26.243233"], ["last_sign_in_at", "2018-04-19 22:27:15.974412"], ["sign_in_count", 17], ["updated_at", "2018-04-19 22:48:26.243848"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/new
+Completed 302 Found in 151ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:48:26 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.8ms)
+  Rendered professors/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:49:17 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.7ms)
+  Rendered professors/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:49:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:49:32 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:49:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 15:52:23 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iDGIeQsc1YEkkw3jJS+9ou8VYWRLZ9ZGDKbL7X6AFIQczSxNqXu8cDyyUA9b+wx7hWD1okry17PFd5p3B78+GQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 15:52:23 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:52:24 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:52:30 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGOTT+fK0kj3dXx7iSfiXusfU6qHtNWeVheazfA3JH/PqtalT/jzVprOdum9khtKT2HG5l38i3p99xF3euQYpQ==", "user"=>{"email"=>"internanalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internanalfn@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGOTT+fK0kj3dXx7iSfiXusfU6qHtNWeVheazfA3JH/PqtalT/jzVprOdum9khtKT2HG5l38i3p99xF3euQYpQ==", "user"=>{"email"=>"internanalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 173ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:52:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:52:51 -0700
+Processing by ProfessorsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:52:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 15:52:57 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Db1tEmWsskvYqtJIreKPkQc1WSTTwckwyV6hU85QbafWdCj4zZ6TVbUR2NqZV3aFo0vMaAmJl9TivirpRINRfQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 22:52:57.847449"], ["last_sign_in_at", "2018-04-19 22:48:26.243233"], ["sign_in_count", 18], ["updated_at", "2018-04-19 22:52:57.848574"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/new
+Completed 302 Found in 150ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:52:57 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (4.4ms)
+  Rendered professors/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:54:49 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:54:50 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (3.3ms)
+  Rendered professors/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:57:39 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:57:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:57:45 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:57:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:57:48 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-19 15:57:49 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-19 15:58:03 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-19 15:58:05 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:58:06 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2018-04-19 15:58:08 -0700
+Processing by ProfessorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 15:59:53 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-19 16:03:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 62.0ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-19 16:03:46 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sI1DMBfD8BY1L+EUpAq0UH3EL4ZpGrGq2vpvsvj+P1QqvlCYrOm6fGUtVOgGyb1V36p5EGCgcrxmo57EbJFmdw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:03:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 16:03:48 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 16:03:59 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFMDk0GXeuV8CKfSJzpHAuOygm1IcuUOzMD/SOQccnNFqphHijU7pug7OC0sDzVUdU/tIGHLBETzp64MAiTEIQ==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-19 23:03:59.159969"], ["last_sign_in_at", "2018-04-19 22:52:57.847449"], ["sign_in_count", 19], ["updated_at", "2018-04-19 23:03:59.160629"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:03:59 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
