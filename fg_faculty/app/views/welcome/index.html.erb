@@ -11,14 +11,27 @@
   <!-- Introduction Row -->
   <body style="background-color:FloralWhite; text-align: center">
   <h1 class="my-4">Project 196+ Mentor Network</h1>
-  <p>This site is a tool to connect new international students at HMC with returning students who share the international identity. Students profiled on this network have self-selected to be mentors and are eager to meet and build relationships with the international student community at HMC.</p>
+  <div style="text-align: justify">
+    <p>Project 196 is a year-round OID program for Mudders who
+       identify as international, third culture, or global nomads!
+       Project 196+ offers key workshops on taxes, employment, understanding
+       US politics, community-building, and more! </p>
 
-  <%=image_tag("HMC_OID_website_header_photo.jpg")%>
+    <p>Project 196+ also offers a mentoring component, through which
+       students can build relationships with other international students
+       who share their identities and interests. OID also acts as a liaison
+       for I-Place and Project 196+ students, as well as organize Project 196+
+       specific events through our office.</p>
+  </div>
+
+  <%=image_tag("OID_Cover.png")%>
   <!-- Team Members Row -->
   <div class="row">
     <div class="col-lg-12">
       <h2 class="my-4">Our Mentors</h2>
-      <p><%= link_to 'Become a Mentor', new_professor_path %></p>
+      <%-if user_signed_in? %>
+          <p><%= link_to 'Become a Mentor', new_professor_path %></p>
+      <% end -%>
     </div>
     <% @professors.each do |professor| %>
       <div class="col-lg-4 col-sm-6 text-center mb-4" style="text-align: left">
@@ -29,6 +42,9 @@
         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
         <p>Phone Number: <%= professor.Phone_Number %></p>
         <p>Nationality: <%= professor.Nationality %></p>
+      <%-if user_signed_in? %>
+          <%= link_to 'Update Profile', edit_professor_path(professor) %>
+      <% end -%>
       </div>
       <% end %>
 

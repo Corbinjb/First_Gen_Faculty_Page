@@ -32767,3 +32767,1130 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:05:17 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (463.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 636ms (Views: 623.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-21 13:05:24 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G1eb27MPP7HG7HWah24M1WepnYdT7jUnYXs3Z8V1/TzKLgss2U7uzD2seAN4dN0yXE0wUB6qEto7mslzfyaKVg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:05:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:07:29 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-21 13:07:31 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-21 13:07:32 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1iEKOYhzymUhJS8/EIad3vgpX6dBmo6CXtGcVkft/39FRjGeSjuGVDDOUSoywfIGxSYxVicgxOcy+WKytAvp5w==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-21 20:07:32.523972"], ["last_sign_in_at", "2018-04-19 23:03:59.159969"], ["sign_in_count", 20], ["updated_at", "2018-04-21 20:07:32.524815"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:07:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/38" for 127.0.0.1 at 2018-04-21 13:07:51 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/38" for 127.0.0.1 at 2018-04-21 13:09:40 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:09:42 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:09:45 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/professors/37" for 127.0.0.1 at 2018-04-21 13:12:15 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZGdBiywJQJ8qKIz9441acSX0SYSz4gXxlpssRp7XVG3jf5M6yZyuZ8p1KdB1N4xuU70jfSwoPyQGkabh+aHcPg==", "professor"=>{"Name"=>"Professor Chotzen", "Email"=>"hc@gmail.com", "Dorm"=>"Atwood", "Major"=>"Computer Science", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff2c281d8e8 @tempfile=#<Tempfile:/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22372-1f1j70d.JPG>, @original_filename="IMG_0015.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"IMG_0015.JPG\"\r\nContent-Type: image/jpeg\r\n">, "Phone_Number"=>"567 349 1230", "Nationality"=>"Guatemalan", "Personal_Statement"=>"Rad !"}, "commit"=>"Update Mentor Profile", "id"=>"37"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+Unpermitted parameters: :Dorm, :Major
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22372-1f1j70d.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-1eegw6v.JPG
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-1eegw6v.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-15iczqa.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-15iczqa.JPG'
+Command :: PATH=/opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-1eegw6v.JPG[0]' 2>/dev/null
+Command :: PATH=/opt/ImageMagick/bin:$PATH; convert '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-1eegw6v.JPG[0]' -auto-orient -resize "128x" -crop "128x128+0+21" +repage '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c6da72905fb82fe969edb6ba7224512020180421-22372-1k5on0k.jpg'
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/c6da72905fb82fe969edb6ba7224512020180421-22372-1k5on0k.jpg to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/d8741489e41c435f579c204f518eee0d20180421-22372-4kri0u.jpg
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-1eegw6v.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-eiv096.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/53181af1ddc29e11c0bf04329e0a7a8e20180421-22372-eiv096.JPG'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "Phone_Number" = ?, "Nationality" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "IMG_0015.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 255267], ["image_updated_at", "2018-04-21 20:12:15.067667"], ["Phone_Number", "567 349 1230"], ["Nationality", "Guatemalan"], ["updated_at", "2018-04-21 20:12:15.713081"], ["id", 37]]
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/037/original/Screen_Shot_2018-04-05_at_1.17.36_PM.png
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/037/thumb/Screen_Shot_2018-04-05_at_1.17.36_PM.jpg
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/37
+Completed 302 Found in 660ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/professors/37" for 127.0.0.1 at 2018-04-21 13:12:15 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:12:21 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:12:34 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:15:41 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 70ms (Views: 37.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/professors/37" for 127.0.0.1 at 2018-04-21 13:15:43 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:15:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-21 13:15:48 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:16:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (238.8ms)
+Completed 200 OK in 296ms (Views: 282.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:16:14 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 56ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/professors/37" for 127.0.0.1 at 2018-04-21 13:16:27 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JiB9UhgZDzvTjVdSCjltySfwlRQ0sbJNTBpdPzl10JehOK/j/YzhwzPQ8n+cg7vWUbn/7at7iJjcENeYXgNYxA==", "professor"=>{"Name"=>"Professor Chotzen", "Email"=>"hc@gmail.com", "Dorm"=>"Atwood", "Major"=>"Computer Science", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa5594c7c40 @tempfile=#<Tempfile:/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22712-185kwfg.JPG>, @original_filename="IMG_0017.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"IMG_0017.JPG\"\r\nContent-Type: image/jpeg\r\n">, "Phone_Number"=>"567 349 1230", "Nationality"=>"Guatemalan", "Personal_Statement"=>"Rad !"}, "commit"=>"Update Mentor Profile", "id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'Dorm' for Professor.):
+  
+app/controllers/professors_controller.rb:34:in `update'
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:18:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (279.8ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `Major' for #<Professor:0x00007fc32dee14f0>):
+    26:       <div class="col-lg-4 col-sm-6 text-center mb-4" style="text-align: left">
+    27:         <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%>
+    28:         <h5><%= link_to professor.Name, professor_path(professor) %></h5>
+    29:         <p>Major: <%= professor.Major %></p>
+    30:         <p>Dorm: <%= professor.Dorm %></p>
+    31:         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
+    32:         <p>Phone Number: <%= professor.Phone_Number %></p>
+  
+app/views/welcome/index.html.erb:29:in `block in _app_views_welcome_index_html_erb__1341958811139328278_70238093887220'
+app/views/welcome/index.html.erb:25:in `_app_views_welcome_index_html_erb__1341958811139328278_70238093887220'
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:24:14 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `Major' for #<Professor:0x00007fc330883808>):
+    26:       <div class="col-lg-4 col-sm-6 text-center mb-4" style="text-align: left">
+    27:         <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%>
+    28:         <h5><%= link_to professor.Name, professor_path(professor) %></h5>
+    29:         <p>Major: <%= professor.Major %></p>
+    30:         <p>Dorm: <%= professor.Dorm %></p>
+    31:         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
+    32:         <p>Phone Number: <%= professor.Phone_Number %></p>
+  
+app/views/welcome/index.html.erb:29:in `block in _app_views_welcome_index_html_erb__1341958811139328278_70238151961340'
+app/views/welcome/index.html.erb:25:in `_app_views_welcome_index_html_erb__1341958811139328278_70238151961340'
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:24:29 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (237.2ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `Major' for #<Professor:0x00007fca69f902c8>):
+    26:       <div class="col-lg-4 col-sm-6 text-center mb-4" style="text-align: left">
+    27:         <%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%>
+    28:         <h5><%= link_to professor.Name, professor_path(professor) %></h5>
+    29:         <p>Major: <%= professor.Major %></p>
+    30:         <p>Dorm: <%= professor.Dorm %></p>
+    31:         <p>Email: <a href = "mailto:<%=professor.Email%>"><%=professor.Email%></a></p>
+    32:         <p>Phone Number: <%= professor.Phone_Number %></p>
+  
+app/views/welcome/index.html.erb:29:in `block in _app_views_welcome_index_html_erb__1628452598967380633_70253613774760'
+app/views/welcome/index.html.erb:25:in `_app_views_welcome_index_html_erb__1628452598967380633_70253613774760'
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:24:50 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:24:56 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 67ms (Views: 57.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/37/edit" for 127.0.0.1 at 2018-04-21 13:26:54 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 65ms (Views: 32.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/professors/37" for 127.0.0.1 at 2018-04-21 13:26:57 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `Dorm' for #<Professor:0x00007fca62f339a8>):
+    37: 
+    38:      <p>
+    39:       	 <strong>Dorm:</strong>
+    40:          <%= @professor.Dorm %>
+    41:      </p>
+    42: 
+    43:      <p>
+  
+app/views/professors/show.html.erb:40:in `_app_views_professors_show_html_erb__3318665652052899621_70253610111980'
+Started GET "/professors/37" for 127.0.0.1 at 2018-04-21 13:27:39 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:27:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:27:46 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-21 13:27:58 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CesGd0zyHcJIbaf7VLcpTz5T2Dhnp6yaIz+4k6n8B6Nq1hGSRXbfrGzrkbQoXyb64tL7eS+TiOXgExdxcvktQQ==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Dorm"=>"asdfsd", "Major"=>"asdfsdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fca6a3732c8 @tempfile=#<Tempfile:/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22829-czwg8z.JPG>, @original_filename="IMG_0013.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"IMG_0013.JPG\"\r\nContent-Type: image/jpeg\r\n">, "Phone_Number"=>"234 234 2345", "Nationality"=>"Madagascar", "Personal_Statement"=>"Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !"}, "commit"=>"Update Mentor Profile", "id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Unpermitted parameters: :Dorm, :Major
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22829-czwg8z.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-2fbl97.JPG
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-2fbl97.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-dlc2fi.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-dlc2fi.JPG'
+Command :: PATH=/opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-2fbl97.JPG[0]' 2>/dev/null
+Command :: PATH=/opt/ImageMagick/bin:$PATH; convert '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-2fbl97.JPG[0]' -auto-orient -resize "128x" -crop "128x128+0+21" +repage '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/bdac607baa82c7d5f50b8916d971a2e220180421-22829-1bq1djv.jpg'
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/bdac607baa82c7d5f50b8916d971a2e220180421-22829-1bq1djv.jpg to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8aa75b34fae3b8fb75a6905c45dc332a20180421-22829-1sg4ap.jpg
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-2fbl97.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-ef8xmb.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/4d94d48d3270d53d63e71021097fe77120180421-22829-ef8xmb.JPG'
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "professors" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["image_file_name", "IMG_0013.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 1946254], ["image_updated_at", "2018-04-21 20:27:58.043382"], ["updated_at", "2018-04-21 20:27:58.923800"], ["id", 34]]
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/Screen_Shot_2018-04-05_at_1.17.14_PM.png
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/Screen_Shot_2018-04-05_at_1.17.14_PM.jpg
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 903ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-21 13:27:58 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:28:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:29:31 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:29:35 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/professors/34" for 127.0.0.1 at 2018-04-21 13:29:52 -0700
+Processing by ProfessorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb8fdEBTlBNECE2bc7dRK1stKHUjNUUYeUh8UIHMPWo+ggiRSddWfWCOe9QPX16eh6wLNGsBYWe6ZNOyWskXiA==", "professor"=>{"Name"=>"Professor Kate", "Email"=>"pk@hmc.edu", "Office"=>"Atwood 216", "Department"=>"Computer Science ", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fca6a398af0 @tempfile=#<Tempfile:/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22829-1pa46hj.JPG>, @original_filename="IMG_0014.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"professor[image]\"; filename=\"IMG_0014.JPG\"\r\nContent-Type: image/jpeg\r\n">, "Phone_Number"=>"234 234 2345", "Nationality"=>"Madagascar", "Personal_Statement"=>"Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer ! Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !Hi ! I love summer !"}, "commit"=>"Update Mentor Profile", "id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/RackMultipart20180421-22829-1pa46hj.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-3hs5ub.JPG
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-3hs5ub.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-1gdl844.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-1gdl844.JPG'
+Command :: PATH=/opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-3hs5ub.JPG[0]' 2>/dev/null
+Command :: PATH=/opt/ImageMagick/bin:$PATH; convert '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-3hs5ub.JPG[0]' -auto-orient -resize "128x" -crop "128x128+0+21" +repage '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/96dca142309c7b0be6d8330b69f4c54420180421-22829-mlmggd.jpg'
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/96dca142309c7b0be6d8330b69f4c54420180421-22829-mlmggd.jpg to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/26f78d9a117a2302f9e239744890f75520180421-22829-hl16nb.jpg
+[paperclip] Trying to link /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-3hs5ub.JPG to /var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-1kcyyfg.JPG
+Command :: PATH=/opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/d0/q1q4h8qj6db0bq4q1kvvprtm0000gn/T/8046dccacda9f84d0a0e260e6226e89920180421-22829-1kcyyfg.JPG'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "professors" SET "Office" = ?, "image_file_name" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "professors"."id" = ?[0m  [["Office", "Atwood 216"], ["image_file_name", "IMG_0014.JPG"], ["image_file_size", 1398534], ["image_updated_at", "2018-04-21 20:29:52.279405"], ["updated_at", "2018-04-21 20:29:53.104278"], ["id", 34]]
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/original/IMG_0013.JPG
+[paperclip] deleting /Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/public/system/professors/images/000/000/034/thumb/IMG_0013.jpg
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/34
+Completed 302 Found in 839ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-21 13:29:53 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:29:56 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:32:59 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:33:02 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for :professor:Symbol):
+    41: 
+    42:   <p>
+    43:     <%= form.label :image %><br>
+    44:     <%= form.file_field :professor.image.url, :required => true %>
+    45:   </p>
+    46: 
+    47:   <p>
+  
+app/views/professors/edit.html.erb:44:in `block in _app_views_professors_edit_html_erb___2964931582956505167_70253670371880'
+app/views/professors/edit.html.erb:6:in `_app_views_professors_edit_html_erb___2964931582956505167_70253670371880'
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:34:38 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for :image:Symbol):
+    41: 
+    42:   <p>
+    43:     <%= form.label :image %><br>
+    44:     <%= form.file_field :image.url, :required => true %>
+    45:   </p>
+    46: 
+    47:   <p>
+  
+app/views/professors/edit.html.erb:44:in `block in _app_views_professors_edit_html_erb___2964931582956505167_70253617761300'
+app/views/professors/edit.html.erb:6:in `_app_views_professors_edit_html_erb___2964931582956505167_70253617761300'
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:34:51 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/34" for 127.0.0.1 at 2018-04-21 13:39:45 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:39:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/35/edit" for 127.0.0.1 at 2018-04-21 13:39:49 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-21 13:40:05 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:40:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/34/edit" for 127.0.0.1 at 2018-04-21 13:40:11 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:40:20 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professors/38/edit" for 127.0.0.1 at 2018-04-21 13:40:29 -0700
+Processing by ProfessorsController#edit as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering professors/edit.html.erb within layouts/application
+  Rendered professors/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors/38" for 127.0.0.1 at 2018-04-21 13:40:42 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:40:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:43:29 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:44:37 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:46:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:52:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (150.7ms)
+Completed 200 OK in 207ms (Views: 204.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 13:56:10 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (73.2ms)
+Completed 200 OK in 133ms (Views: 130.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-21 13:56:57 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0oPVvaOZv5jAqyvcJBPK808aBzmPg/gFW56OoZRwMZA7Qao9OnynchRxDVcRsm2f3BYbaFUB4M/1pinOKU3DfQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 13:56:57 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 14:33:31 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (377.2ms)
+Completed 200 OK in 455ms (Views: 440.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:33:34 -0700
+Processing by WelcomeController#gallery as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-21 14:33:34 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 67ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-21 14:33:37 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TmR/UwNvbifhB2/eMMMN/e2xDtZEuBhTnJ1i/b0xrGpef9bhuIDOVdzXEeD5nC2c/EaxthiTH93GqZkr390YKA==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-21 21:33:37.504098"], ["last_sign_in_at", "2018-04-21 20:07:32.523972"], ["sign_in_count", 21], ["updated_at", "2018-04-21 21:33:37.505001"], ["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/welcome/gallery
+Completed 302 Found in 174ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:33:37 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "196_Rock_paper.jpg" is not present in the asset pipeline.):
+    1: 
+    2: <%=image_tag("196_New_Ground.jpg")%>
+    3: <%=image_tag("196_Rock_paper.jpg")%>
+    4: <%=image_tag("196_Dumpling.jpg")%>
+    5: <%=image_tag("196_Game.jpg")%>
+    6: <%=image_tag("196_Lakshmi")%>
+  
+app/views/welcome/gallery.html.erb:3:in `_app_views_welcome_gallery_html_erb___1939355137431181928_70338535141740'
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:34:33 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "196_Rock_paper.jpg" is not present in the asset pipeline.):
+    1: 
+    2: <%=image_tag("196_New_Ground.jpg")%>
+    3: <%=image_tag("196_Rock_paper.jpg")%>
+    4: <%=image_tag("196_Dumpling.jpg")%>
+    5: <%=image_tag("196_Game.jpg")%>
+    6: <%=image_tag("196_Lakshmi")%>
+  
+app/views/welcome/gallery.html.erb:3:in `_app_views_welcome_gallery_html_erb___1939355137431181928_70338545644580'
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:34:36 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "196_Rock_paper.jpg" is not present in the asset pipeline.):
+    1: 
+    2: <%=image_tag("196_New_Ground.jpg")%>
+    3: <%=image_tag("196_Rock_paper.jpg")%>
+    4: <%=image_tag("196_Dumpling.jpg")%>
+    5: <%=image_tag("196_Game.jpg")%>
+    6: <%=image_tag("196_Lakshmi")%>
+  
+app/views/welcome/gallery.html.erb:3:in `_app_views_welcome_gallery_html_erb___1939355137431181928_70338523274780'
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:35:47 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 114ms (Views: 111.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:36:01 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:39:46 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:40:02 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:41:24 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:41:39 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:42:31 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/welcome/gallery.html.erb:2: syntax error, unexpected ',', expecting ')'
+...age_tag("196_New_Ground.jpg", , size: "543x361"));@output_bu...
+...                              ^
+/Users/josephesbenshade/First_Gen_Faculty_Page/fg_faculty/app/views/welcome/gallery.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...round.jpg", , size: "543x361"));@output_buffer.safe_append='
+...                              ^):
+  
+app/views/welcome/gallery.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/welcome/gallery.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:42:46 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:43:40 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:44:59 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:45:34 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:45:55 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:46:35 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:47:05 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:51:16 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:52:00 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:52:27 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:53:03 -0700
+Processing by WelcomeController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/gallery.html.erb within layouts/application
+  Rendered welcome/gallery.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:53:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-21 14:53:27 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iveKrh7oH9/JuxLQZea6bIM8t88VVtC0mpmfLmIYsKkqpEVF9h1DQiVLElpZt5cD/OgrD6je2SCohkMG3mGw4A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 14:53:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:53:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/35" for 127.0.0.1 at 2018-04-21 14:53:34 -0700
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/gallery" for 127.0.0.1 at 2018-04-21 14:53:37 -0700
+Processing by WelcomeController#gallery as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-21 14:53:37 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:53:40 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:59:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_gallery_path' for #<#<Class:0x00007ff1e8670ea8>:0x00007ff1e866aff8>
+Did you mean?  welcome_index_path):
+    42:           </li>
+    43:         <% end -%>
+    44:         <li class="nav-item">
+    45:           <%= link_to( "Gallery", welcome_gallery_path) %>
+    46:         </li>
+    47:       </ul>
+    48:     </div>
+  
+app/views/layouts/application.html.erb:45:in `_app_views_layouts_application_html_erb___2136974741818049504_70338481424560'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:59:33 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professors/gallery" for 127.0.0.1 at 2018-04-21 14:59:35 -0700
+Processing by ProfessorsController#gallery as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-21 14:59:35 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /Users/josephesbenshade/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 85ms (Views: 68.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-21 14:59:36 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S3J/IekFTK8te5yjWytJ8bpOSbwHpIcq47uMQS8xUF9axwT3dVgk0j6ycl3QZi3Z9siYEgc3WLKWWozzs13yFw==", "user"=>{"email"=>"internationalFN@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "internationalfn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-21 21:59:36.676472"], ["last_sign_in_at", "2018-04-21 21:33:37.504098"], ["sign_in_count", 22], ["updated_at", "2018-04-21 21:59:36.677223"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professors/gallery
+Completed 302 Found in 158ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/professors/gallery" for 127.0.0.1 at 2018-04-21 14:59:36 -0700
+Processing by ProfessorsController#gallery as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professors/gallery.html.erb within layouts/application
+  Rendered professors/gallery.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 14:59:39 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-21 14:59:40 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NWkrR3hqRgktC0kcagahHd6BF7+xk/xJ5RSdCaaMD2MyOCmjKSmFtSx+Phf7siWUsjlN9OrxfQ5k+uiu94C8zg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 14:59:40 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-21 15:00:14 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/professors/gallery" for 127.0.0.1 at 2018-04-21 15:00:16 -0700
+Processing by ProfessorsController#gallery as HTML
+  Rendering professors/gallery.html.erb within layouts/application
+  Rendered professors/gallery.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 15:00:23 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professors/gallery" for 127.0.0.1 at 2018-04-21 15:00:24 -0700
+Processing by ProfessorsController#gallery as HTML
+  Rendering professors/gallery.html.erb within layouts/application
+  Rendered professors/gallery.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-04-21 15:00:37 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
