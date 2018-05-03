@@ -47,6 +47,6 @@ class ProfessorsController < ApplicationController
 
   private
     def professor_params
-      params.require(:professor).permit(:Name, :Email, :Office, :Department, :image, :Phone_Number, :Nationality, :Personal_Statement)
+      params.require(:professor).permit(:Name, :Email, :Office, :Department, :image, :image_file_name, :Phone_Number, :Nationality, :Personal_Statement)
     end
 end

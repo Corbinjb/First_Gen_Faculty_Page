@@ -3,7 +3,7 @@
 <h2>
   Update Profile
 </h2>
-<%= form_with model: @professor, local: true do |form| %>
+<%= form_for(@professor, local: true, html: {multipart: true }) do |form| %>
 
   <% if @professor.errors.any? %>
     <div id="error_explanation">
@@ -41,12 +41,12 @@
 
   <p>
     <%= form.label :image %><br>
-    <%= form.file_field :image_file_name, :required => true %>
+    <%= form.file_field :image, :required => true %>
   </p>
 
   <p>
     <%= form.label :Phone_Number %><br>
-    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}" %>
+    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}", :placeholder => "000 000 0000"%>
   </p>
 
   <p>
@@ -66,8 +66,8 @@
 
  <% end %>
 <%= link_to 'Back', professor_path(@professor) %><br>
-<td><%= link_to 'Delete Profile', professor_path(@professor),
-              :confirm => "Are you sure?", :method => :delete %></td>
+<%= link_to 'Delete Profile', professor_path(@professor),
+              method: :delete, data: {confirm: "Are you sure?"}%>
 <p style="margin-bottom: 15px">
 </p>
 </body>

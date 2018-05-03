@@ -32,12 +32,12 @@
 
   <p>
     <%= form.label :Dorm %><br>
-    <%= form.text_field :Dorm %>
+    <%= form.text_field :Office %>
   </p>
 
   <p>
     <%= form.label :Major %><br>
-    <%= form.text_field :Major, :required => true %>
+    <%= form.text_field :Department, :required => true %>
   </p>
 
   <p>
@@ -47,7 +47,7 @@
 
   <p>
     <%= form.label :Phone_Number %><br>
-    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}" %>
+    <%= form.telephone_field :Phone_Number, :required => true, :pattern => "[0-9]{3} [0-9]{3} [0-9]{4}", :placeholder => "000 000 0000" %>
   </p>
 
   <p>
