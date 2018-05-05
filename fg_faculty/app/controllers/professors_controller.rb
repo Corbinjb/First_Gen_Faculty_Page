@@ -2,7 +2,12 @@ class ProfessorsController < ApplicationController
   before_action :authenticate_user!, except: [ :index, :show, :gallery ]
 
   def index
-    @professors = Professor.all
+    @professor = Professor.all
+    if params[:search]
+      @professor = Professor.search(params[:search]).order("created_at DESC")
+    else
+      @professor = Professor.all.order("created_at DESC")
+    end
   end
 
   def show
