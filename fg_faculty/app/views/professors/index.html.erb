@@ -1,28 +1,32 @@
 <h1>Listing Professors</h1>
-<%-if user_signed_in? %>
-  <%= link_to 'New Professor', new_professor_path %>
-<% end -%>
+<%= link_to 'New Professor', new_professor_path %>
 <table>
   <tr>
     <th>Name</th>
     <th>Headshots</th>
+    <th>Email</th>
+    <th>Office</th>
     <th>Department</th>
+    <th>Phone</th>
     <th>Nationality</th>
+    <th>Personal Statement</th>
   </tr>
 
-  <% @professor.each do |professor| %>
+  <% @professors.each do |professor| %>
     <tr>
       <td><%= professor.Name %></td>
-      <td><%= link_to image_tag(professor.image.url(:thumb), class: 'img-circle'), professor_path(professor)%></td>
+      <td><%= professor.image %></td>
+      <td><%= professor.Office %></td>
       <td><%= professor.Department %></td>
+      <td><%= professor.Email %></td>
+      <td><%= professor.Phone_Number %></td>
       <td><%= professor.Nationality %></td>
+      <td><%= professor.Personal_Statement %></td>
       <td><%= link_to 'Show', professor_path(professor) %></td><br>
-      <%-if user_signed_in? %>
-        <td><%= link_to 'Update Profile', edit_professor_path(professor) %></td><br>
-      <% end -%>
+      <td><%= link_to 'Edit', edit_professor_path(professor) %></td><br>
+      <td><%= link_to 'Destroy', professor_path(professor),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
-  <% if @professor.blank? %>
-    <h4>There are no professor containing the term <%= params[:search] %>.</h4>
   <% end %>
 </table>
